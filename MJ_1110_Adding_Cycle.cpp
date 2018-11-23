@@ -11,17 +11,17 @@ int add(int n) {
 int main() {
 
 	int num;
-	cout << "0-99 ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ½Ã¿À: ";
+	cout << "0-99 ìˆ«ìë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ";
 	cin >> num;
 
 	if (num < 0 || num > 100)
 		return 0;
 
-	add(num);
+	int result = add(num);
 	int count = 1;
 
-	while (add(num) != num) {
-		add(num);
+	while (result != num) {
+		result = add(result);
 		count++;
 	}
 
