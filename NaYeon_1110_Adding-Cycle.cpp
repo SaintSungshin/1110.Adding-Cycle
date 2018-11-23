@@ -13,7 +13,7 @@ int main()
 
 	while (keynumber < 100) //26
 	{
-		count++;
+		count++;			//count++를 while 문 맨 아래에 해야 될거 같아~else 아래에~(유나)
 		int num = keynumber;
 		int newnumber;
 		newnumber = (num % 10) + (num / 10); //2+6 = 8
@@ -27,7 +27,7 @@ int main()
 			continue;
 	}
 
-	cout <<"����Ŭ�� Ƚ���� "<< count << endl;
+	cout <<"»çÀÌÅ¬ÀÇ È½¼ö´Â "<< count << endl;
 
 	return 0;
 }
