@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int cycle(int n) // »çÀÌÅ¬ ÇÑ ÁÖ±â¸¦ µ¹¸®´Â ÇÔ¼ö
+int cycle(int n) // ì‚¬ì´í´ í•œ ì£¼ê¸°ë¥¼ ëŒë¦¬ëŠ” í•¨ìˆ˜
 {
 	int result;
 	result = (n % 10) * 10 + ((n / 10) + (n % 10)) % 10;
@@ -15,26 +15,15 @@ int main()
 	int count = 0;
 	cin >> userNum;
 
-	cycle(userNum);
+	int a = cycle(userNum);
 		count++;
 
-	do {
-		cycle(userNum);
-		count++;
-	}
-	while()
-
-	/*
-	do {
-		if 
-		result = (n % 10) * 10 + ((n / 10) + (n % 10)) % 10;
-		count++;
-		if (result == n)
-		break;
-	} while (n >= 0 && n <= 99);
-	*/
-
-
+		while (a != userNum) 
+		{
+			int b = cycle(a);
+			count++;
+			a = b;
+		}
 
 	cout << count;
 
